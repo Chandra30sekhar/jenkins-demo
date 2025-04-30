@@ -16,20 +16,20 @@ pipeline{
     
     	stage('Installing'){
     	    steps{
-    		    sh "cd /var/lib/jenkins/workspace/git-jenkinsfile-demo/simple-java-maven-app/"
-		    sh "mvn package"
+    		    sh "cd /var/lib/jenkins/workspace/git-jenkinsfile-demo/simple-java-maven-app/ & mvn package"
+		    
     	    }
     		}
 	stage('Testing'){
 		steps{
-			sh "cd /var/lib/jenkins/workspace/git-jenkinsfile-demo/simple-java-maven-app/"
-			sh "mvn test"
+			sh "cd /var/lib/jenkins/workspace/git-jenkinsfile-demo/simple-java-maven-app/ & mvn test"
+			
 		}
 	}
 	stage('Deploying'){
 		steps{
 			
-			sh "java -jar /var/lib/jenkins/workspace/git-jenkinsfile-demo/target/my-app-1.0-SNAPSHOT.jar"
+			sh "java -jar /var/lib/jenkins/workspace/git-jenkinsfile-demo/simple-java-maven-app/target/my-app-1.0-SNAPSHOT.jar"
 		}
 	}
 	}
