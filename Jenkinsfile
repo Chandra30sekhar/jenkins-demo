@@ -12,19 +12,19 @@ pipeline{
     	stage('Installing'){
     	    steps{
     		    
-		    mvn package
+		    sh "mvn package"
     	    }
     		}
 	stage('Testing'){
 		steps{
 			
-			mvn test
+			sh "mvn test"
 		}
 	}
 	stage('Deploying'){
 		steps{
 			
-			java -jar /var/lib/jenkins/workspace/git-jenkinsfile-demo/target/my-app-1.0-SNAPSHOT.jar
+			sh "java -jar /var/lib/jenkins/workspace/git-jenkinsfile-demo/target/my-app-1.0-SNAPSHOT.jar"
 		}
 	}
 	}
