@@ -4,7 +4,7 @@ pipeline{
     	stage('Build'){
     		steps{
     		
-		git clone "https://github.com/Chandra30sekhar/simple-java-maven-app.git"
+		sh "git clone https://github.com/Chandra30sekhar/simple-java-maven-app.git"
 			
     		}
     	}
