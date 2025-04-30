@@ -8,7 +8,7 @@ pipeline{
 	stages{
     	stage('Build'){
     		steps{
-    		sh "rm -d -f simple-java-maven-app"
+    		sh "rm -d -rf simple-java-maven-app"
 		sh "git clone https://github.com/Chandra30sekhar/simple-java-maven-app.git"
 			
     		}
