@@ -16,13 +16,13 @@ pipeline{
     
     	stage('Installing'){
     	    steps{
-    		    sh "cd /var/lib/jenkins/workspace/git-jenkinsfile-demo/simple-java-maven-app/ & mvn package"
+    		    sh "cd /var/lib/jenkins/workspace/git-jenkinsfile-demo/simple-java-maven-app/ && mvn package"
 		    
     	    }
     		}
 	stage('Testing'){
 		steps{
-			sh "cd /var/lib/jenkins/workspace/git-jenkinsfile-demo/simple-java-maven-app/ & mvn test"
+			sh "cd /var/lib/jenkins/workspace/git-jenkinsfile-demo/simple-java-maven-app/ && mvn test"
 			
 		}
 	}
